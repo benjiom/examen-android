@@ -12,9 +12,12 @@ public class Activity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_3);
+        setContentView(R.layout.activity_2);
 
         Log.e("DEVE0304", "Activity2:onCreate()");
-
+        Intent intent = getIntent();
+        String nom = intent.getStringExtra("nom");
+        TextView text = findViewById(R.id.text_view_id);
+        text.setText(nom);
     }
 }
